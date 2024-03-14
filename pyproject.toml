@@ -1,0 +1,36 @@
+[tool]
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.0.0"
+tag_format = "$version"
+version_files = ["pyproject.toml"]
+
+[tool.mypy]
+mypy_path = "typings"
+
+[project]
+name = "ml-instrumentation"
+version = "0.0.0"
+description = ""
+authors = [
+    {name = "Andy Patterson", email = "andnpatterson@gmail.com"},
+    {name = "andy", email = "andnpatterson@gmail.com"},
+]
+dependencies = [
+    "jax>=0.4.21",
+    "numpy>=1.26.2",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.optional-dependencies]
+dev = [
+    "pip",
+    "mypy",
+    "ruff",
+    "commitizen",
+    "pre-commit",
+    "pytest>=7.3,<9.0",
+    "pytest-benchmark~=4.0",
+]
