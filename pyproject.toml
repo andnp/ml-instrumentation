@@ -21,7 +21,7 @@ name = "ml-instrumentation"
 version = "0.0.0"
 description = ""
 authors = [
-    {name = "Andy Patterson", email = "andrew.patterson@amii.ca"},
+    {name = "Andy Patterson", email = "andnpatterson@gmail.com"},
 ]
 dependencies = [
     "numpy>=1.26,<=2.1.0",
