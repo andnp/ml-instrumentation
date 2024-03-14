@@ -1,0 +1,6 @@
+.venv
+.pytest_cache
+.benchmarks
+*.pyc
+test.db
+test.py
