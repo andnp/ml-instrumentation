@@ -8,7 +8,8 @@ class Pipe(Sampler):
     def next(self, v: float) -> float | None:
         out: float | None = v
         for sub in self._subs:
-            if out is None: return None
+            if out is None:
+                return None
             out = sub.next(out)
 
         return out
@@ -19,7 +20,8 @@ class Pipe(Sampler):
         out = first.next_eval(v)
 
         for sub in subs:
-            if out is None: return None
+            if out is None:
+                return None
             out = sub.next(out)
 
         return out

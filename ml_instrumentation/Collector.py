@@ -92,7 +92,8 @@ class Collector:
         self.next_frame()
         for k in self._sampler:
             v = self._sampler[k].end()
-            if v is None: continue
+            if v is None:
+                continue
 
             self._write(k, v)
 
