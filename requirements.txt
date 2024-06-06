@@ -32,7 +32,9 @@ mypy==1.9.0
 mypy-extensions==1.0.0
     # via mypy
 nodeenv==1.8.0
-    # via pre-commit
+    # via
+    #   pre-commit
+    #   pyright
 numpy==1.26.4
     # via
     #   jax
@@ -55,6 +57,7 @@ prompt-toolkit==3.0.36
     # via questionary
 py-cpuinfo==9.0.0
     # via pytest-benchmark
+pyright==1.1.357
 pytest==8.1.1
     # via pytest-benchmark
 pytest-benchmark==4.0.0
