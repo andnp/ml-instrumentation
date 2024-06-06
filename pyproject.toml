@@ -11,7 +11,6 @@ version = "0.0.0"
 description = ""
 authors = [
     {name = "Andy Patterson", email = "andnpatterson@gmail.com"},
-    {name = "andy", email = "andnpatterson@gmail.com"},
 ]
 dependencies = [
     "jax>=0.4.21",
