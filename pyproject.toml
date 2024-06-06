@@ -5,9 +5,6 @@ version = "0.0.0"
 tag_format = "$version"
 version_files = ["pyproject.toml"]
 
-[tool.mypy]
-mypy_path = "typings"
-
 [project]
 name = "ml-instrumentation"
 version = "0.0.0"
