@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1725398897581,
+  "lastUpdate": 1725894499066,
   "repoUrl": "https://github.com/andnp/ml-instrumentation",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -156,6 +156,58 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.0006945299242495214",
             "extra": "mean: 2.2440648971554644 msec\nrounds: 457"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "andnpatterson@gmail.com",
+            "name": "Andy Patterson",
+            "username": "andnp"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "338baf3dafc85eb8076523d8eacb6a8da9c34b6f",
+          "message": "Merge pull request #3 from andnp/dependabot/pip/deps-e5bd3890c3\n\nchore(deps): update numpy requirement from <=2.1.0,>=1.26 to >=1.26,<=2.1.1 in the deps group",
+          "timestamp": "2024-09-09T09:07:49-06:00",
+          "tree_id": "8687d34dc9726d91f692c08a19ecda4ba998722b",
+          "url": "https://github.com/andnp/ml-instrumentation/commit/338baf3dafc85eb8076523d8eacb6a8da9c34b6f"
+        },
+        "date": 1725894498255,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/performance/test_Collector.py::test_benchmark_write_path1[basic_collector]",
+            "value": 153.69669982753177,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0019630607151080747",
+            "extra": "mean: 6.506320572413941 msec\nrounds: 145"
+          },
+          {
+            "name": "tests/performance/test_Collector.py::test_benchmark_write_path1[disk_collector]",
+            "value": 112.54349825388064,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0021731179450522136",
+            "extra": "mean: 8.885453318184187 msec\nrounds: 66"
+          },
+          {
+            "name": "tests/performance/test_Collector.py::test_benchmark_read1[basic_collector]",
+            "value": 448.7505967523076,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0009873535471919097",
+            "extra": "mean: 2.2284092929061 msec\nrounds: 437"
+          },
+          {
+            "name": "tests/performance/test_Collector.py::test_benchmark_read1[disk_collector]",
+            "value": 449.68372474680797,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0010061673999587765",
+            "extra": "mean: 2.2237851738197656 msec\nrounds: 466"
           }
         ]
       }
