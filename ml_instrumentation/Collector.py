@@ -42,6 +42,11 @@ class Collector:
         self._exp_id = id
         self._frame = -1
 
+    def safe_set_experiment_id(self, id: str | int):
+        if self._exp_id is None:
+            self._exp_id = id
+            self._frame = -1
+
     def get_current_experiment_id(self) -> str | int:
         assert self._exp_id is not None
         return self._exp_id
