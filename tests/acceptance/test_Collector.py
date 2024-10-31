@@ -49,6 +49,8 @@ def test_collector1(collector_fixture, tmp_path, request):
     with open(tmp_path / 'chk.pkl', 'rb') as f:
         collector = pickle.load(f)
 
+    assert collector.get_frame() == (50_000 - 1)
+
     # execute the second half of the program
     expected_2 = simulate_run(
         collector,
