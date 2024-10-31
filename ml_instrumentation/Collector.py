@@ -46,6 +46,9 @@ class Collector:
         assert self._exp_id is not None
         return self._exp_id
 
+    def get_frame(self):
+        return self._frame
+
     def next_frame(self):
         self._frame += 1
 
