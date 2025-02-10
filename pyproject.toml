@@ -36,14 +36,17 @@ classifiers = [
     "Programming Language :: Python :: Implementation :: PyPy",
 ]
 
-[project.optional-dependencies]
+[dependency-groups]
+jax = [
+    "jax>=0.5.0",
+]
 dev = [
-    "pip",
-    "ruff",
-    "pytest",
-    "pytest-cov",
-    "pytest-benchmark",
-    "pyright",
-    "commitizen",
-    "pre-commit",
+    "commitizen>=4.2.1",
+    "pip>=25.0.1",
+    "pre-commit>=4.1.0",
+    "pyright>=1.1.393",
+    "pytest>=8.3.4",
+    "pytest-benchmark>=5.1.0",
+    "pytest-cov>=6.0.0",
+    "ruff>=0.9.5",
 ]
