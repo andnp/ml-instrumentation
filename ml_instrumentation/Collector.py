@@ -1,6 +1,14 @@
 from typing import Any, Callable, Dict
+
+import jax.experimental
 from ml_instrumentation.Sampler import Sampler, Ignore, Identity, identity
 from ml_instrumentation.Writer import Writer, Point
+
+try:
+    import jax
+except ImportError:
+    jax = None
+
 
 class Collector:
     def __init__(
@@ -94,6 +102,21 @@ class Collector:
             return
 
         self._write(name, v)
+
+    def collect_jax(self, name: str, value: Any):
+        if jax is None:
+            raise Exception('jax is not installed')
+
+        def _callback(metrics: dict[str, Any]):
+            assert jax is not None
+            for name, value in metrics.items():
+                if isinstance(value, jax.Array):
+                    value = value.item()
+
+                self.collect(name, value)
+
+        metrics = {name: value}
+        jax.debug.callback(_callback, metrics, ordered=False)
 
     # ---------------
     # -- Accessing --
