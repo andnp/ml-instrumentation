@@ -194,7 +194,7 @@ class Writer:
         if name in self._built:
             return
 
-        cur.execute(f'CREATE TABLE "{name}"(frame INTEGER PRIMARY KEY ASC, id, measurement)')
+        cur.execute(f'CREATE TABLE "{name}"(frame INTEGER, id, measurement)')
         self._built.add(name)
 
     def _write_many(self, cur: sqlite3.Cursor, m: str, d: List[SqlPoint]):
