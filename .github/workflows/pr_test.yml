@@ -24,7 +24,7 @@ jobs:
 
       - run: |
           uv venv
-          uv sync
+          uv sync --group=jax
 
       - run: echo "$PWD/.venv/bin" >> $GITHUB_PATH
 
