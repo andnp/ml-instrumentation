@@ -10,7 +10,7 @@ This library aims to have a high-performance write path, off-loading as much dat
 
 ## Installation
 ```bash
-pip install git+https://github.com/Amii-Open-Source/ml-instrumentation.git
+pip install git+https://github.com/rlai-lab/ml-instrumentation.git
 ```
 
 ## Usage example
